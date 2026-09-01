@@ -1,14 +1,6 @@
 {
   "buildCommand": "",
   "installCommand": "",
-  "framework": "static",
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "devCommand": "python3 -m http.server 8000",
+  "public": true
 }
