@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZCIEA Member Registry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div id="login-view" class="login-shell">
+    <div class="login-art"><div class="art-copy"><span class="eyebrow">ZIMBABWE · 2026</span><h1>Informal work,<br><em>formally seen.</em></h1><p>A trusted registry for the people who keep Zimbabwe moving.</p><div class="art-stat"><strong>01</strong><span>Unified member intelligence</span></div></div></div>
+    <div class="login-panel"><div class="brand"><img class="brand-logo" src="logo/logo.png" alt="ZCIEA logo" /><div><strong>ZCIEA</strong><small>MEMBER REGISTRY</small></div></div><div class="login-form"><span class="eyebrow">SECURE ACCESS</span><h2>Welcome back</h2><p>Sign in to manage your association.</p><label>Username<input id="username" value="admin" autocomplete="username" /></label><label>Password<input id="password" type="password" value="admin123" autocomplete="current-password" /></label><button id="login-btn" class="btn primary full">Sign in <span>↗</span></button><div id="login-error" class="error hidden">Incorrect username or password.</div></div><footer>Zimbabwe Chamber of Informal Economy Associations<br><span>Member data platform</span></footer></div>
+  </div>
+
+  <div id="app-view" class="app-shell hidden">
+    <aside class="sidebar"><div class="side-brand"><img class="brand-logo" src="logo/logo.png" alt="ZCIEA logo" /><div><strong>ZCIEA</strong><small>MEMBER REGISTRY</small></div></div><nav><span class="nav-label">WORKSPACE</span><button class="nav-item active" data-page="overview"><span>◈</span> Overview</button><button class="nav-item" data-page="members"><span>♧</span> Members <b id="nav-count">0</b></button><button class="nav-item" data-page="reports"><span>▤</span> Reports</button><button class="nav-item" data-page="outreach"><span>⌁</span> Outreach</button><span class="nav-label">TOOLS</span><button class="nav-item" data-page="import"><span>⇧</span> Import / export</button></nav><div class="side-bottom"><div class="user-chip"><div class="avatar">AM</div><div><strong>Admin Manager</strong><small>Super admin</small></div><span class="status-dot"></span></div><button id="logout-btn" class="logout">↪ Sign out</button></div></aside>
+    <main class="main"><header class="topbar"><div><span class="eyebrow" id="page-kicker">OVERVIEW</span><h1 id="page-title">Good morning, Admin</h1></div><div class="top-actions"><span id="total-members" class="last-sync">● <b>0</b> total members</span><button class="icon-btn" title="Notifications">♧<i></i></button><button id="header-add" class="btn primary">＋ Add member</button></div></header><div id="toast" class="toast"></div><section id="page-content"></section></main>
+  </div>
+  <div id="modal-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>

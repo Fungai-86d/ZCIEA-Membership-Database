@@ -1,0 +1,14 @@
+{
+  "buildCommand": "",
+  "installCommand": "",
+  "framework": "static",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
