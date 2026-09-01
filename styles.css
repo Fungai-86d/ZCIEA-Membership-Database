@@ -7,4 +7,34 @@
 
 .report-limit,.outreach-limit{margin:14px 0;font-size:12px}
 
+/* CR-80 Card Styles */
+.cr80-modal{max-width:320px!important}
+.card-cr80{background:linear-gradient(135deg,#123a35 0%,#0d756b 100%);color:white;width:336px;height:212px;padding:0;border:1px solid var(--line);border-radius:2px;display:flex;flex-direction:column;font-size:11px;overflow:hidden}
+.card-header{display:flex;align-items:center;gap:6px;padding:6px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.1)}
+.card-logo-cr80{width:32px;height:32px;object-fit:contain}
+.card-org-name{display:flex;flex-direction:column;gap:0}
+.card-org-name strong{font-size:9px;line-height:1;font-weight:600}
+.card-main{display:grid;grid-template-columns:70px 1fr 50px;gap:6px;padding:6px;flex:1}
+.card-photo-section{width:70px;height:100%;background:#000;border-radius:1px;overflow:hidden}
+.card-photo{width:100%;height:100%;object-fit:cover}
+.photo-placeholder{width:100%;height:100%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:600}
+.card-details{display:flex;flex-direction:column;gap:2px;overflow:hidden;font-size:9px}
+.detail-line{display:flex;gap:4px;line-height:1.2}
+.detail-line label{font-weight:600;min-width:50px;flex-shrink:0;font-size:8px;color:var(--lime)}
+.detail-line span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card-qr-section{display:flex;align-items:center;justify-content:center}
+.card-qr-section>div{width:50px;height:50px;background:white;padding:2px;border-radius:2px}
+.card-qr-section canvas{width:100%!important;height:100%!important}
+.card-footer-cr80{background:rgba(0,0,0,.2);padding:3px 6px;text-align:center;font-size:8px;font-weight:600;border-top:1px solid rgba(255,255,255,.1)}
+
+@media print{
+  body,html{margin:0;padding:0}
+  .modal-backdrop{display:flex;align-items:center;justify-content:center;background:transparent}
+  .modal{max-width:none;border:none;box-shadow:none;margin:0;padding:0!important}
+  .cr80-modal{max-width:none!important}
+  .card-cr80{width:336px;height:212px;margin:0;page-break-after:always;break-after:page}
+  .modal-actions{display:none}
+  .modal-head{display:none}
+}
+
 @media print{body{margin:0;padding:0}html{margin:0;padding:0}.modal-backdrop{display:flex;align-items:center;justify-content:center;background:transparent}.modal{max-width:none;border:none;box-shadow:none;margin:0;padding:0}.card-preview{width:8.56cm;height:5.4cm;margin:0;padding:0;border:0;box-shadow:none;break-after:page;page-break-after:always}.modal-actions{display:none}.modal-head{display:none}.card-validity{margin:0;padding:0}.card-top,.card-body,.card-footer{margin:0;padding:0}.modal{margin:0;padding:0}.card-top{padding:8px}}
